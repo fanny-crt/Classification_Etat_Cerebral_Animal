@@ -14,7 +14,11 @@ Dans un second temps, nous avons effectué une différenciation (∆Xt = Xt − 
 
 Application sur les features extraites des séries temporelles
 
+![alt text](https://github.com/fanny-crt/Classification_etat_celebrale_animal/blob/main/images/analyse_discriminante_lineaire.PNG)
+
 Application sur les features extraites des séries temporelles différenciées
+
+![alt text](https://github.com/fanny-crt/Classification_etat_celebrale_animal/blob/main/images/analyse_discriminante_lineaire_diff.PNG)
 
 - Logistic Regression (Régression logistique binaire)
 
