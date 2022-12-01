@@ -4,11 +4,29 @@ L'objectif de ce projet est de classer l'état célébrale d'un animal. Pour cel
 
 # Features Extraction
 
-Dans un premier temps, nous avons extrait les features de chaque série temporelle de l’échantillon d’entrainement et de test avec la fonction extract_features de la librairie tsfresh de Python. Cependant, on obtient un jeu de données avec 464 variables. Pour réduire la dimension du jeu de données, nous avons ensuite sélectionner les variables avec la fonction select_features de tsfresh. On obtient un jeu de données avec 240 variables.
+Dans un premier temps, nous avons extrait les features de chaque série temporelle de l’échantillon d’entrainement et de test avec la fonction extract_features de la librairie tsfresh de Python. Cependant, on obtient un jeu de données avec 464 variables. Pour réduire la dimension du jeu de données, nous avons ensuite sélectionné les variables avec la fonction select_features de tsfresh. On obtient un jeu de données avec 240 variables.
 
 Dans un second temps, nous avons effectué une différenciation (∆Xt = Xt − Xt−1) des séries temporelles des  ́echantillons d’entrainement et de test. Nous avons ensuite appliqué une extraction et une sélection des features de la même manière que précédemment. Par la suite, les algorithmes de Machine Learning seront appliqués sur ces nouveaux jeux de données.
 
 # Model Building
+
+- Linear Discriminant Analysis (Analyse discriminante linéaire)
+
+Application sur les features extraites des séries temporelles
+
+Application sur les features extraites des séries temporelles différenciées
+
+- Logistic Regression (Régression logistique binaire)
+
+Application sur les features extraites des séries temporelles
+
+Application sur les features extraites des séries temporelles différenciées
+
+- Random Forest (Forêts aléatoires)
+
+Application sur les features extraites des séries temporelles
+
+Application sur les features extraites des séries temporelles différenciées
 
 # Model Performance
 
@@ -20,4 +38,4 @@ où Pr(a) est la probabilité que les prédictions concordent avec les valeurs r
 
 
 # Code 
-- Python
+- Python : scikit-learn, tsfresh
