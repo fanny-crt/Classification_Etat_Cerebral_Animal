@@ -5,6 +5,10 @@ L'objectif de ce data challenge est de classer l'état célébrale d'un animal. 
 ![alt text](https://github.com/fanny-crt/Classification_etat_celebrale_animal/blob/main/images/xtrain.PNG)
 ![alt text](https://github.com/fanny-crt/Classification_etat_celebrale_animal/blob/main/images/ytrain.PNG)
 
+# Exploratory Data Analysis
+
+![alt text](https://github.com/fanny-crt/Classification_etat_celebrale_animal/blob/main/images/sequences_pics_neuronaux.PNG)
+
 # Features Extraction
 
 Dans un premier temps, nous avons extrait les features de chaque série temporelle de l’échantillon d’entrainement et de test avec la fonction extract_features de la librairie tsfresh de Python. Cependant, on obtient un jeu de données avec 464 variables. Pour réduire la dimension du jeu de données, nous avons ensuite sélectionné les variables avec la fonction select_features de tsfresh. On obtient un jeu de données avec 240 variables.
