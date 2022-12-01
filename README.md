@@ -14,3 +14,5 @@ L'objectif de ce projet est de classer l'état célébrale d'un animal. Pour cel
 # Model Performance
 
 La particularité de ce data challenge est que les distributions des classes sont disproportionnées. En effet, dans l’échantillon d'entrainement, on a 13577 individus appartenant à la classe 0 et 3058 individus appartenant à la classe 1. C’est pour cela que nous avons choisi le Kappa de Cohen pour déterminer le meilleur modèle. Le calcul de ce score κ se fait de la manière suivante :
+
+![alt text](https://github.com/fanny-crt/Classification_etat_celebrale_animal/blob/main/images/kappa_cohen.PNG)
