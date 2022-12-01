@@ -14,23 +14,43 @@ Dans un second temps, nous avons effectué une différenciation (∆Xt = Xt − 
 
 Application sur les features extraites des séries temporelles
 
-![alt text](https://github.com/fanny-crt/Classification_etat_celebrale_animal/blob/main/images/analyse_discriminante_lineaire.PNG)
+![alt text](https://github.com/fanny-crt/Classification_etat_celebrale_animal/blob/main/images/Analyse_discriminante_lineaire.PNG)
 
 Application sur les features extraites des séries temporelles différenciées
 
-![alt text](https://github.com/fanny-crt/Classification_etat_celebrale_animal/blob/main/images/analyse_discriminante_lineaire_diff.PNG)
+![alt text](https://github.com/fanny-crt/Classification_etat_celebrale_animal/blob/main/images/Analyse_discriminante_lineaire_diff.PNG)
 
-- Logistic Regression (Régression logistique binaire)
+- Logistic Regression (Régression logistique binaire) 
+
+Les hyperparamètres de la régression logistique sont déterminés par une grille de recherche par validation croisée.
+
+Application sur les features extraites des séries temporelles avec les hyperparamètres suivants : 
+penalty : "none" 
+solver : "newton-cg"
+
+Nous avons également décidé d’appliquer une régression logistique pénalisée de type lasso en fixant les hyperparamètres penalty à ”l1”, C à 0.8 et solver à "liblinear" de la fonction LogisticRegression() de la librairie sklearn. 
+
+Application sur les features extraites des séries temporelles différenciées
+penalty : "none" 
+solver : "newton-cg"
+
+Comme pour les features extraites des séries temporelles, nous avons également décidé d’appliquer une régression logistique pénalisée de type lasso en fixant les hyperparamètres penalty à ”l1”, C à 0.8 et solver à "liblinear" de la fonction LogisticRegression() de la librairie sklearn. 
+
+- Random Forest (Forêt aléatoire)
+
+Les hyperparamètres de la forêt aléatoire sont déterminés par une grille de recherche par validation croisée.
 
 Application sur les features extraites des séries temporelles
+criterion: "entropy"
+min samples leaf: 10
+min samples split 10 
+n estimators : 50
 
 Application sur les features extraites des séries temporelles différenciées
-
-- Random Forest (Forêts aléatoires)
-
-Application sur les features extraites des séries temporelles
-
-Application sur les features extraites des séries temporelles différenciées
+criterion: "gini"
+min samples leaf: 10
+min samples split 10 
+n estimators : 50
 
 # Model Performance
 
@@ -39,6 +59,8 @@ La particularité de ce data challenge est que les distributions des classes son
 ![alt text](https://github.com/fanny-crt/Classification_etat_celebrale_animal/blob/main/images/kappa_cohen.PNG)
 
 où Pr(a) est la probabilité que les prédictions concordent avec les valeurs réelles des classes 0 et 1 et Pr(h) est la somme de la probabilité que les prédictions concordent avec les valeurs réelles de la classe 0 par hasard et de la probabilité que les prédictions concordent avec les valeurs réelles de classe 1 par hasard. Le kappa de Cohen est donc une bonne métrique d’évaluation pour les données déséquilibrées, car il prend en compte que les bonnes estimations qui ne sont pas dû au hasard.
+
+![alt text](https://github.com/fanny-crt/Classification_etat_celebrale_animal/blob/main/images/model_performance_neurones.PNG)
 
 
 # Code 
